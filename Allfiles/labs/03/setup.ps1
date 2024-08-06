@@ -139,6 +139,7 @@ write-host "Creating $synapseWorkspace Synapse Analytics workspace in $resourceG
 write-host "(This may take some time!)"
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -TemplateFile "setup.json" `
+  -Tags $Tags `
   -Mode Complete `
   -workspaceName $synapseWorkspace `
   -dataLakeAccountName $dataLakeAccountName `
